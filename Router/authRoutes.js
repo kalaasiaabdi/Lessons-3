@@ -1,0 +1,11 @@
+const express = require ('express') 
+const router = express.Router()
+const signUpControllers = require ('../controllers/signUpControllers')
+const loginController  = require ('../controllers/loginController')
+const requestPassword = require ('../controllers/reRePassword')
+const resetPassword= require ('../controllers/resetpassword')
+router.post('/reset-password' , resetPassword)
+router.post('/request-password' , requestPassword)
+router.post('/login-in' , loginController)
+router.post ('/sign-up', signUpControllers  )
+module.exports = router
